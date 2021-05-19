@@ -1,0 +1,29 @@
+{
+  "xsappname": "sapbtpsapui5extension",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+        {
+            "name": "$XSAPPNAME.BPViewer",
+            "description": "My BusinessPartner Role"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "BPViewerRole",
+            "description": "My BusinessPartner Role Template",
+            "scope-references": [
+                "$XSAPPNAME.BPViewer"
+            ]
+        }
+    ],
+    "role-collections": [
+        {
+            "name": "BPViewerRC",
+            "description": "My BusinessPartner Role Collection",
+            "role-template-references": [
+                "$XSAPPNAME.BPViewerRole"
+            ]
+        }
+    ]
+}
